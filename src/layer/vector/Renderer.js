@@ -57,7 +57,7 @@ L.Renderer = L.Layer.extend({
 		    min = this._map.containerPointToLayerPoint(size.multiplyBy(-p)).round();
 
 		this._bounds = new L.Bounds(min, min.add(size.multiplyBy(1 + p * 2)).round());
-		
+
 		this._topLeft = this._map.layerPointToLatLng(min);
 		this._zoom = this._map.getZoom();
 	}
