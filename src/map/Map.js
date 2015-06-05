@@ -64,6 +64,7 @@ L.Map = L.Evented.extend({
 
 	setZoom: function (zoom, options) {
 		if (!this._loaded) {
+			this._zoom = zoom;
 			return this;
 		}
 		return this.setView(this.getCenter(), zoom, {zoom: options});
