@@ -53,8 +53,8 @@ L.Renderer = L.Layer.extend({
 
 	_updateTransform: function () {
 		var zoom = this._map.getZoom(),
-			center = this._map.getCenter(),
-			scale = this._map.getZoomScale(zoom, this._zoom),
+		    center = this._map.getCenter(),
+		    scale = this._map.getZoomScale(zoom, this._zoom),
 		    offset = this._map._latLngToNewLayerPoint(this._topLeft, zoom, center);
 
 		L.DomUtil.setTransform(this._container, offset, scale);
